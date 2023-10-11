@@ -37,26 +37,44 @@ AOS.init({
   $.Scrollax();
 
   // Burger Menu
-  var burgerMenu = function () {
-    $("body").on("click", ".js-fh5co-nav-toggle", function (event) {
-      event.preventDefault();
+  function initBurgerMenu() {
+    var $nav = $("#ftco-nav");
+    var $toggleButton = $(".js-fh5co-nav-toggle");
 
-      if ($("#ftco-nav").is(":visible")) {
-        $(this).removeClass("active");
-        $("#ftco-nav").hide(); // Hide the navigation menu
+    // Toggle the navigation menu on button click
+    $toggleButton.on("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation(); // Prevent event propagation
+
+      if ($nav.is(":visible")) {
+        $toggleButton.removeClass("active");
+        $nav.hide(); // Hide the navigation menu
       } else {
-        $(this).addClass("active");
-        $("#ftco-nav").show(); // Show the navigation menu
+        $toggleButton.addClass("active");
+        $nav.show(); // Show the navigation menu
       }
     });
 
-    // Add a click event handler for the navigation links
-    $("#ftco-nav a[href^='#']").on("click", function () {
-      $("#ftco-nav").hide(); // Hide the navigation menu when a link is clicked
+    // Hide the navigation menu when a link is clicked
+    $nav.find("a[href^='#']").on("click", function () {
+      $nav.hide();
     });
-  };
 
-  burgerMenu();
+    // Close the navigation menu if the user clicks anywhere outside it
+    $(document).on("click", function (event) {
+      if (
+        !$toggleButton.is(event.target) &&
+        !$nav.is(event.target) &&
+        $nav.has(event.target).length === 0
+      ) {
+        $toggleButton.removeClass("active");
+        $nav.hide();
+      }
+    });
+  }
+
+  // Initialize the burger menu
+  initBurgerMenu();
 
   var onePageClick = function () {
     $(document).on("click", '#ftco-nav a[href^="#"]', function (event) {
@@ -78,34 +96,35 @@ AOS.init({
 
   onePageClick();
 
-  var carousel = function () {
-    $(".home-slider").owlCarousel({
-      loop: true,
-      autoplay: true,
-      margin: 0,
-      animateOut: "fadeOut",
-      animateIn: "fadeIn",
-      nav: false,
-      autoplayHoverPause: false,
-      items: 1,
-      navText: [
-        "<span class='ion-md-arrow-back'></span>",
-        "<span class='ion-chevron-right'></span>",
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        600: {
-          items: 1,
-        },
-        1000: {
-          items: 1,
-        },
-      },
-    });
-  };
-  carousel();
+  // Disabled Carousel Effect
+  // var carousel = function () {
+  //   $(".home-slider").owlCarousel({
+  //     loop: true,
+  //     autoplay: true,
+  //     margin: 0,
+  //     animateOut: "fadeOut",
+  //     animateIn: "fadeIn",
+  //     nav: false,
+  //     autoplayHoverPause: false,
+  //     items: 1,
+  //     navText: [
+  //       "<span class='ion-md-arrow-back'></span>",
+  //       "<span class='ion-chevron-right'></span>",
+  //     ],
+  //     responsive: {
+  //       0: {
+  //         items: 1,
+  //       },
+  //       600: {
+  //         items: 1,
+  //       },
+  //       1000: {
+  //         items: 1,
+  //       },
+  //     },
+  //   });
+  // };
+  // carousel();
 
   $("nav .dropdown").hover(
     function () {
