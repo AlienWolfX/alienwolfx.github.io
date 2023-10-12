@@ -41,26 +41,23 @@ AOS.init({
     var $nav = $("#ftco-nav");
     var $toggleButton = $(".js-fh5co-nav-toggle");
 
-    // Toggle the navigation menu on button click
     $toggleButton.on("click", function (event) {
       event.preventDefault();
-      event.stopPropagation(); // Prevent event propagation
+      event.stopPropagation();
 
       if ($nav.is(":visible")) {
         $toggleButton.removeClass("active");
-        $nav.hide(); // Hide the navigation menu
+        $nav.hide();
       } else {
         $toggleButton.addClass("active");
-        $nav.show(); // Show the navigation menu
+        $nav.show();
       }
     });
 
-    // Hide the navigation menu when a link is clicked
     $nav.find("a[href^='#']").on("click", function () {
       $nav.hide();
     });
 
-    // Close the navigation menu if the user clicks anywhere outside it
     $(document).on("click", function (event) {
       if (
         !$toggleButton.is(event.target) &&
@@ -73,7 +70,6 @@ AOS.init({
     });
   }
 
-  // Initialize the burger menu
   initBurgerMenu();
 
   var onePageClick = function () {
@@ -96,35 +92,34 @@ AOS.init({
 
   onePageClick();
 
-  // Disabled Carousel Effect
-  // var carousel = function () {
-  //   $(".home-slider").owlCarousel({
-  //     loop: true,
-  //     autoplay: true,
-  //     margin: 0,
-  //     animateOut: "fadeOut",
-  //     animateIn: "fadeIn",
-  //     nav: false,
-  //     autoplayHoverPause: false,
-  //     items: 1,
-  //     navText: [
-  //       "<span class='ion-md-arrow-back'></span>",
-  //       "<span class='ion-chevron-right'></span>",
-  //     ],
-  //     responsive: {
-  //       0: {
-  //         items: 1,
-  //       },
-  //       600: {
-  //         items: 1,
-  //       },
-  //       1000: {
-  //         items: 1,
-  //       },
-  //     },
-  //   });
-  // };
-  // carousel();
+  var carousel = function () {
+    $(".home-slider").owlCarousel({
+      loop: true,
+      autoplay: false,
+      margin: 0,
+      animateOut: "fadeOut",
+      animateIn: "fadeIn",
+      nav: false,
+      autoplayHoverPause: false,
+      items: 1,
+      navText: [
+        "<span class='ion-md-arrow-back'></span>",
+        "<span class='ion-chevron-right'></span>",
+      ],
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 1,
+        },
+        1000: {
+          items: 1,
+        },
+      },
+    });
+  };
+  carousel();
 
   $("nav .dropdown").hover(
     function () {
@@ -133,7 +128,7 @@ AOS.init({
       // clearTimeout(timer);
       $this.addClass("show");
       $this.find("> a").attr("aria-expanded", true);
-      $this.find(".dropdown-menu").addClass("animated-fast fadeInUp show");
+      // $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
       $this.find(".dropdown-menu").addClass("show");
     },
     function () {
@@ -142,7 +137,7 @@ AOS.init({
       // timer = setTimeout(function(){
       $this.removeClass("show");
       $this.find("> a").attr("aria-expanded", false);
-      $this.find(".dropdown-menu").removeClass("animated-fast fadeInUp show");
+      // $this.find('.dropdown-menu').removeClass('animated-fast fadeInUp show');
       $this.find(".dropdown-menu").removeClass("show");
       // }, 100);
     }
@@ -291,3 +286,39 @@ AOS.init({
     fixedContentPos: false,
   });
 })(jQuery);
+
+// Scroll to top button
+
+let mybutton = document.getElementById("myBtn");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 650 ||
+    document.documentElement.scrollTop > 650
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+mybutton.addEventListener("click", () => {
+  scrollToTop();
+});
+
+function scrollToTop() {
+  const scrollDuration = 1000;
+  const scrollStep = -window.scrollY / (scrollDuration / 15);
+
+  const scrollInterval = setInterval(() => {
+    if (window.scrollY !== 0) {
+      window.scrollBy(0, scrollStep);
+    } else {
+      clearInterval(scrollInterval);
+    }
+  }, 15);
+}

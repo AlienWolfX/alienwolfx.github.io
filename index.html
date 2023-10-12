@@ -8,40 +8,41 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- Icon -->
-    <link rel="icon" href="images/favicon.png" />
-    <!-- End -->
-
-    <!-- Font -->
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
       rel="stylesheet"
     />
-    <!-- End -->
+    <link rel="icon" href="images/favicon.png" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="fontawesome/css/all.css" />
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
+
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
+
     <link rel="stylesheet" href="css/aos.css" />
+
     <link rel="stylesheet" href="css/ionicons.min.css" />
+
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="devicon/devicon.min.css" />
-    <!-- End -->
+
+    <link rel="stylesheet" href="fontawesome/css/all.css" />
+    <link rel="stylesheet" href="devicon/devicon-min.css" />
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <!-- Scroll to top -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <button
+      onclick="topFunction()"
+      id="myBtn"
+      title="Go to top"
+      style="display: block"
+    >
       <i class="fa fa-circle-chevron-up"></i>
     </button>
-    <!-- End -->
-
-    <!-- Nav -->
+    <!-- End Scroll to top -->
     <nav
       class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target"
       id="ftco-navbar"
@@ -74,6 +75,11 @@
             <li class="nav-item">
               <a href="#resume-section" class="nav-link"><span>Resume</span></a>
             </li>
+            <!-- <li class="nav-item">
+              <a href="#services-section" class="nav-link"
+                ><span>Services</span></a
+              >
+            </li> -->
             <li class="nav-item">
               <a href="#projects-section" class="nav-link"
                 ><span>Portfolio</span></a
@@ -88,11 +94,9 @@
         </div>
       </div>
     </nav>
-    <!-- End Nav -->
 
-    <!-- Home -->
     <section id="home-section" class="hero">
-      <div class="home-slider owl-carousel owl-loaded owl-drag">
+      <div class="home-slider owl-carousel">
         <div class="slider-item">
           <div class="overlay"></div>
           <div class="container">
@@ -103,17 +107,44 @@
               <div
                 class="one-third js-fullheight order-md-last img"
                 style="background-image: url(images/me.png)"
-              ></div>
+              >
+                <div class="overlay"></div>
+              </div>
               <div
                 class="one-forth d-flex align-items-center ftco-animate"
-                data-scrollax="properties: { translateY: '70%' }"
+                data-scrollax=" properties: { translateY: '70%' }"
               >
                 <div class="text">
                   <span class="subheading">Hi There!</span>
                   <h1 class="mb-4 mt-3">
-                    I'm <span>Allen Gabrielle S. Cruiz</span>
+                    I'm <span>Allen Gabrielle Cruiz</span>
                   </h1>
-                  <h2 class="mb-4">Embedded Developer, Security Researcher</h2>
+                  <h2 class="mb-4">Embeded Developer</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-item">
+          <div class="overlay"></div>
+          <div class="container">
+            <div
+              class="row d-flex no-gutters slider-text align-items-end justify-content-end"
+              data-scrollax-parent="true"
+            >
+              <div
+                class="one-third js-fullheight order-md-last img"
+                style="background-image: url(images/thumbs.png)"
+              >
+                <div class="overlay"></div>
+              </div>
+              <div
+                class="one-forth d-flex align-items-center ftco-animate"
+                data-scrollax=" properties: { translateY: '70%' }"
+              >
+                <div class="text">
+                  <h1 class="mb-4 mt-3">A <span>Secruity Researcher</span></h1>
                 </div>
               </div>
             </div>
@@ -121,9 +152,7 @@
         </div>
       </div>
     </section>
-    <!-- End Home -->
 
-    <!-- About -->
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
       <div class="container">
         <div class="row d-flex">
@@ -132,7 +161,7 @@
               <div class="overlay"></div>
               <div
                 class="img d-flex align-self-stretch align-items-center"
-                style="background-image: url(images/thumbs.png)"
+                style="background-image: url(images/me.png)"
               ></div>
             </div>
           </div>
@@ -157,6 +186,10 @@
                   </li>
                   <li class="d-flex">
                     <span>Alias:</span> <span>AlienWolfX</span>
+                  </li>
+                  <li class="d-flex">
+                    <span>Repository:</span>
+                    <span class="fa-solid fa-github"></span>
                   </li>
                   <li class="d-flex">
                     <span>Date of birth:</span> <span>August 05, 2003</span>
@@ -196,22 +229,20 @@
         </div>
       </div>
     </section>
-    <!-- End About -->
 
-    <!-- Stats -->
     <section
       class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img mt-5"
       id="section-counter"
     >
       <div class="container">
         <!-- <h2 class="mb-4 ftco-animate">GitHub Stats</h2> -->
-        <div class="row d-md-flex align-items-center">
+        <div class="row d-md-flex align-items-center ftco-animate">
           <div
-            class="col-md d-flex justify-content-center counter-wrap ftco-animate"
+            class="col-md d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated"
           >
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="163">0</strong>
+                <strong class="number" data-number="163">163</strong>
                 <span>Total Contributions</span>
                 <i
                   style="font-size: xx-large"
@@ -221,22 +252,22 @@
             </div>
           </div>
           <div
-            class="col-md d-flex justify-content-center counter-wrap ftco-animate"
+            class="col-md d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated"
           >
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="9000">0</strong>
+                <strong class="number" data-number="9000">9,000</strong>
                 <span>Lines of Code</span>
                 <i style="font-size: xx-large" class="fa-solid fa-code"></i>
               </div>
             </div>
           </div>
           <div
-            class="col-md d-flex justify-content-center counter-wrap ftco-animate"
+            class="col-md d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated"
           >
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="2000">0</strong>
+                <strong class="number" data-number="2000">2,000</strong>
                 <span>Happy Customers</span>
                 <i
                   style="font-size: xx-large"
@@ -246,11 +277,11 @@
             </div>
           </div>
           <div
-            class="col-md d-flex justify-content-center counter-wrap ftco-animate"
+            class="col-md d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated"
           >
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="424">0</strong>
+                <strong class="number" data-number="424">424</strong>
                 <span>Cups of coffee</span>
                 <i style="font-size: xx-large" class="fa-solid fa-mug-hot"></i>
               </div>
@@ -259,9 +290,7 @@
         </div>
       </div>
     </section>
-    <!-- End Stats -->
 
-    <!-- Skills -->
     <section class="ftco-section" id="skills-section">
       <div class="container">
         <div class="row justify-content-center pb-5">
@@ -274,60 +303,144 @@
             </p>
           </div>
         </div>
-        <div class="row text-center">
-          <div class="col-md-6 col-12 animate-box mb-2">
-            <div class="ftco-animate">
-              <img
-                style="width: 100px"
-                src="devicon/icons/css3/css3-original.svg"
-              />
+        <div class="interests container ftco-animate" bis_skin_checked="1">
+          <div class="row" bis_skin_checked="1">
+            <div class="col-lg-3 col-md-4 text-center" bis_skin_checked="1">
+              <div class="icon-box" bis_skin_checked="1">
+                <img
+                  style="width: 50px; height: 50px"
+                  src="devicon/icons/html5/html5-plain-wordmark.svg"
+                />
+                <h3 class="ml-5">HTML5</h3>
+              </div>
             </div>
-            <div class="ftco-animate">
-              <img
-                style="width: 100px"
-                src="devicon/icons/html5/html5-original.svg"
-              />
+            <div
+              class="col-lg-3 col-md-4 mt-4 mt-md-0 text-center"
+              bis_skin_checked="1"
+            >
+              <div class="icon-box" bis_skin_checked="1">
+                <img
+                  style="width: 50px; height: 50px"
+                  src="devicon/icons/css3/css3-plain-wordmark.svg"
+                />
+                <h3 class="ml-5">CSS3</h3>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-12 animate-box mb-2">
-            <div class="ftco-animate">
-              <img
-                style="width: 100px"
-                src="/devicon/icons/linux/linux-original.svg"
-              />
+            <div
+              class="col-lg-3 col-md-4 mt-4 mt-md-0 text-center"
+              bis_skin_checked="1"
+            >
+              <div class="icon-box" bis_skin_checked="1">
+                <img
+                  style="width: 50px; height: 50px"
+                  src="devicon/icons/linux/linux-original.svg"
+                />
+                <h3 class="ml-5">GNU/LINUX</h3>
+              </div>
             </div>
-            <div class="ftco-animate">
-              <img
-                style="width: 100px"
-                src="devicon/icons/bash/bash-original.svg"
-              />
+            <div class="col-lg-3 col-md-4 mt-4 mt-lg-0" bis_skin_checked="1">
+              <div class="icon-box" bis_skin_checked="1">
+                <img
+                  style="height: 50px; width: 50px"
+                  src="devicon/icons/bash/bash-plain.svg"
+                />
+                <h3 class="ml-5">BASH</h3>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-12 animate-box mb-2">
-            <div class="ftco-animate">
-              <img
-                style="width: 100px"
-                src="devicon/icons/bash/bash-original.svg"
-              />
+            <div class="col-lg-3 col-md-4 mt-4" bis_skin_checked="1">
+              <div class="icon-box" bis_skin_checked="1">
+                <img
+                  style="height: 50px; width: 50px"
+                  src="devicon/icons/arduino/arduino-original-wordmark.svg"
+                />
+                <h3 class="ml-5">Arduino</h3>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mt-4" bis_skin_checked="1">
+              <div class="icon-box" bis_skin_checked="1">
+                <img
+                  style="height: 50px; width: 50px"
+                  src="devicon/icons/canva/canva-original.svg"
+                />
+                <h3 class="ml-5">Canva</h3>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mt-4" bis_skin_checked="1">
+              <div class="icon-box" bis_skin_checked="1">
+                <img
+                  style="height: 50px; width: 50px"
+                  src="devicon/icons/embeddedc/embeddedc-original.svg"
+                />
+                <h3 class="ml-5">EmbeddedC</h3>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mt-4" bis_skin_checked="1">
+              <div class="icon-box" bis_skin_checked="1">
+                <img
+                  style="height: 50px; width: 50px"
+                  src="devicon/icons/cplusplus/cplusplus-original.svg"
+                />
+                <h3 class="ml-5">C++</h3>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mt-4" bis_skin_checked="1">
+              <div class="icon-box" bis_skin_checked="1">
+                <img
+                  style="height: 50px; width: 50px"
+                  src="devicon/icons/git/git-original-wordmark.svg"
+                />
+                <h3 class="ml-5">Git</h3>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mt-4" bis_skin_checked="1">
+              <div class="icon-box" bis_skin_checked="1">
+                <img
+                  style="height: 50px; width: 50px"
+                  src="devicon/icons/bootstrap/bootstrap-original.svg"
+                />
+                <h3 class="ml-5">BootStrap</h3>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mt-4" bis_skin_checked="1">
+              <div class="icon-box" bis_skin_checked="1">
+                <img
+                  style="height: 50px; width: 50px"
+                  src="devicon/icons/gcc/gcc-original.svg"
+                />
+                />
+                <h3 class="ml-5">GCC</h3>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mt-4" bis_skin_checked="1">
+              <div class="icon-box" bis_skin_checked="1">
+                <img
+                  style="height: 50px; width: 50px"
+                  src="devicon/icons/mysql/mysql-original-wordmark.svg"
+                />
+                <h3 class="ml-5">MySQL</h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- End Skills -->
 
-    <!-- Resume -->
     <section class="ftco-section ftco-no-pb resume" id="resume-section">
       <div class="container">
         <div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
+          <div
+            class="col-md-10 heading-section text-center ftco-animate fadeInUp ftco-animated"
+          >
             <h2 class="mb-4">Resume</h2>
             <p>My Resume</p>
           </div>
         </div>
-        <div class="row ftco-animate" bis_skin_checked="1">
+        <div
+          class="row ftco-animate fadeInUp ftco-animated"
+          bis_skin_checked="1"
+        >
           <div class="col-lg-6" bis_skin_checked="1">
-            <h3 class="resume-title">Professional Experience</h3>
+            <h3 class="resume-title">Work Experience</h3>
             <div class="resume-item" bis_skin_checked="1">
               <h4>
                 Network Installer
@@ -401,39 +514,114 @@
         </div>
       </div>
     </section>
-    <!-- End Resume -->
 
-    <!-- Projects -->
+    <!-- <section class="ftco-section" id="services-section">
+      <div class="container">
+        <div class="row justify-content-center py-5 mt-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Services</h2>
+            <p>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 text-center d-flex ftco-animate">
+            <a href="#" class="services-1">
+              <span class="icon">
+                <i class="flaticon-analysis"></i>
+              </span>
+              <div class="desc">
+                <h3 class="mb-5">Web Design</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 text-center d-flex ftco-animate">
+            <a href="#" class="services-1">
+              <span class="icon">
+                <i class="flaticon-flasks"></i>
+              </span>
+              <div class="desc">
+                <h3 class="mb-5">Phtography</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 text-center d-flex ftco-animate">
+            <a href="#" class="services-1">
+              <span class="icon">
+                <i class="flaticon-ideas"></i>
+              </span>
+              <div class="desc">
+                <h3 class="mb-5">Web Developer</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4 text-center d-flex ftco-animate">
+            <a href="#" class="services-1">
+              <span class="icon">
+                <i class="flaticon-analysis"></i>
+              </span>
+              <div class="desc">
+                <h3 class="mb-5">App Developing</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 text-center d-flex ftco-animate">
+            <a href="#" class="services-1">
+              <span class="icon">
+                <i class="flaticon-flasks"></i>
+              </span>
+              <div class="desc">
+                <h3 class="mb-5">Branding</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 text-center d-flex ftco-animate">
+            <a href="#" class="services-1">
+              <span class="icon">
+                <i class="flaticon-ideas"></i>
+              </span>
+              <div class="desc">
+                <h3 class="mb-5">Product Strategy</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
     <section class="ftco-section ftco-project" id="projects-section">
       <div class="container">
         <div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
             <h2 class="mb-4">Portfolio</h2>
-            <p>Explore key accomplishments from my career</p>
+            <p>Explore key accomplishments of my career</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4">
             <div
               class="project img ftco-animate d-flex justify-content-center align-items-center"
-              style="background-image: url(images/project-4.jpg)"
+              style="background-image: url(images/ecoswapx.png)"
             >
               <div class="overlay"></div>
               <div class="text text-center p-4">
-                <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                <span>Web Design</span>
+                <h3><a href="#">EcoSwapX</a></h3>
+                <span>Web App</span>
               </div>
             </div>
           </div>
           <div class="col-md-8">
             <div
               class="project img ftco-animate d-flex justify-content-center align-items-center"
-              style="background-image: url(images/project-5.jpg)"
+              style="background-image: url(images/harvestx.png)"
             >
               <div class="overlay"></div>
               <div class="text text-center p-4">
-                <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                <span>Web Design</span>
+                <h3><a href="#">HarvestX</a></h3>
+                <span>Program</span>
               </div>
             </div>
           </div>
@@ -441,23 +629,23 @@
           <div class="col-md-8">
             <div
               class="project img ftco-animate d-flex justify-content-center align-items-center"
-              style="background-image: url(images/project-1.jpg)"
+              style="background-image: url(images/progx.png)"
             >
               <div class="overlay"></div>
               <div class="text text-center p-4">
-                <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                <span>Web Design</span>
+                <h3><a href="#">ProgrammerX</a></h3>
+                <span>Software</span>
               </div>
             </div>
 
             <div
               class="project img ftco-animate d-flex justify-content-center align-items-center"
-              style="background-image: url(images/project-6.jpg)"
+              style="background-image: url(images/8192fu.png)"
             >
               <div class="overlay"></div>
               <div class="text text-center p-4">
-                <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                <span>Web Design</span>
+                <h3><a href="#">RTL8192FU</a></h3>
+                <span>LINUX DRIVER</span>
               </div>
             </div>
           </div>
@@ -466,24 +654,12 @@
               <div class="col-md-12">
                 <div
                   class="project img ftco-animate d-flex justify-content-center align-items-center"
-                  style="background-image: url(images/project-2.jpg)"
+                  style="background-image: url(images/hackgpon.png)"
                 >
                   <div class="overlay"></div>
                   <div class="text text-center p-4">
-                    <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                    <span>Web Design</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div
-                  class="project img ftco-animate d-flex justify-content-center align-items-center"
-                  style="background-image: url(images/project-3.jpg)"
-                >
-                  <div class="overlay"></div>
-                  <div class="text text-center p-4">
-                    <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                    <span>Web Design</span>
+                    <h3><a href="#">Hack GPON</a></h3>
+                    <span>Web App</span>
                   </div>
                 </div>
               </div>
@@ -492,9 +668,7 @@
         </div>
       </div>
     </section>
-    <!-- End Projects -->
 
-    <!-- Contact -->
     <section
       class="ftco-section contact-section ftco-no-pb"
       id="contact-section"
@@ -560,18 +734,16 @@
         </div>
       </div>
     </section>
-    <!-- End Contact -->
 
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
             <p>
-              Copyright &copy;
+              Copyright ©
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              Colorlib
             </p>
             <p>
               Made with ❤️ by
@@ -607,8 +779,6 @@
       </svg>
     </div>
 
-    <!-- JavaScript -->
-    <script src="js/scrollTop.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
