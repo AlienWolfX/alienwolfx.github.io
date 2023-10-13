@@ -92,34 +92,43 @@ AOS.init({
 
   onePageClick();
 
-  var carousel = function () {
-    $(".home-slider").owlCarousel({
-      loop: true,
-      autoplay: false,
-      margin: 0,
-      animateOut: "fadeOut",
-      animateIn: "fadeIn",
-      nav: false,
-      autoplayHoverPause: false,
-      items: 1,
-      navText: [
-        "<span class='ion-md-arrow-back'></span>",
-        "<span class='ion-chevron-right'></span>",
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        600: {
-          items: 1,
-        },
-        1000: {
-          items: 1,
-        },
-      },
-    });
-  };
-  carousel();
+  const textToType = [
+    "Embedded Developer",
+    "Security Researcher",
+    "Dumbass"
+  ];
+  const typedTextElement = document.getElementById("typed-text");
+  let textIndex = 0;
+  let charIndex = 0;
+  let isErasing = false;
+  
+  function typeText() {
+    const currentText = textToType[textIndex];
+    if (!isErasing && charIndex < currentText.length) {
+      typedTextElement.textContent += currentText.charAt(charIndex);
+      charIndex++;
+      setTimeout(typeText, 80); // Typing speed
+    } else if (!isErasing && charIndex === currentText.length) {
+      isErasing = true;
+      setTimeout(typeText, 1000); // Delay before erasing
+    } else {
+      typedTextElement.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        isErasing = false;
+        textIndex = (textIndex + 1) % textToType.length; 
+        setTimeout(typeText, 1000);
+      } else {
+        setTimeout(typeText, 60); // Erasing speed
+      }
+    }
+  }
+  
+  // Start typing animation
+  typeText();
+  
+  
+  
 
   $("nav .dropdown").hover(
     function () {
@@ -297,8 +306,8 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (
-    document.body.scrollTop > 650 ||
-    document.documentElement.scrollTop > 650
+    document.body.scrollTop > 550 ||
+    document.documentElement.scrollTop > 550
   ) {
     mybutton.style.display = "block";
   } else {

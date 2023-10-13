@@ -12730,3 +12730,133 @@ textarea.form-control {
   background: rgba(255, 255, 255, 0.12);
   transform: scale(1.1);
 }
+
+/* MAIN SECTION */
+#main {
+  background-image: url('../images/me.png');
+  background-size: contain; 
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px; 
+}
+
+#main h1 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 4rem; 
+  margin-bottom: 10px; 
+  font-weight: bold;
+}
+
+#main p {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 1.5rem; 
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+#main span {
+  font-weight: 800;
+  color: #4682b4;
+}
+
+#main .social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
+}
+
+#main .social-links a {
+  font-size: 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  margin-right: 8px;
+  border-radius: 50%;
+  width: 60px; 
+  height: 60px; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+#main .social-links a:hover {
+  color: #4682b4;
+}
+
+.typed-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Adjust the width to 100% for responsiveness */
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  color: #FFF;
+  font-family: "Poppins", Arial, sans-serif;
+  z-index: 1;
+}
+
+.typed-text-container p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Media Query for Small Screens (e.g., mobile devices) */
+/* Medium Screens (e.g., tablets) */
+@media screen and (max-width: 1024px) {
+  #main h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  #main p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  .typed-text-container {
+    font-size: 1.2rem;
+    top: 50%;
+  }
+
+  #main .social-links a {
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Small Screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+  #main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+  }
+
+  #main p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+
+  .typed-text-container {
+    font-size: 1rem;
+    top: 70%;
+  }
+
+  #main .social-links a {
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}
