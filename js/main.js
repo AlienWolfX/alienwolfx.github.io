@@ -92,10 +92,12 @@ AOS.init({
 
   onePageClick();
 
+  // Typing
+
   const textToType = [
     "Embedded Developer",
     "Security Researcher",
-    "Dumbass"
+    "Human"
   ];
   const typedTextElement = document.getElementById("typed-text");
   let textIndex = 0;
