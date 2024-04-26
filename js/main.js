@@ -97,6 +97,11 @@ AOS.init({
   const textToType = [
     "Embedded Developer",
     "Security Researcher",
+    "AI Enthusiast",
+    "Web Developer",
+    "Tech Enthusiast",
+    "Open Source Contributor",
+    "Student",
     "Human"
   ];
   const typedTextElement = document.getElementById("typed-text");
