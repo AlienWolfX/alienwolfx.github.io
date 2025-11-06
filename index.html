@@ -1,32 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Allen Cruiz — IT professional focusing on hardware systems and backend development">
     <title>Allen Cruiz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="theme-color" content="#071022">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hi there, Welcome!</h1>
-    <p>I'm Allen Gabrielle S. Cruiz, an IT professional with a strong focus on hardware systems and a solid background in backend development.</p>
+    <header class="container">
+        <div class="brand">Allen Cruiz</div>
+        <nav aria-label="Main navigation">
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <h2>My Skills</h2>
-    <ul>
-        <li>Hardware Systems Windows and Linux</li>
-        <li>Backend Development</li>
-        <li>Networking</li>
-    </ul>
+    <main class="container">
+        <section class="hero">
+            <img src="assets/images/me.jpg" alt="Profile image: Allen Cruiz" class="avatar">
+            <div>
+                <h1>Hi there — welcome!</h1>
+                <p class="lead">I'm Allen Gabrielle S. Cruiz, an IT professional with a strong focus on hardware systems and a solid background in backend development.</p>
+            </div>
+        </section>
 
-    <h2>My Projects</h2>
-    <ul>
-        <li>UZ801-USB-MODEM: Research on Qualcomm MSM8916 processor</li>
-        <li>RookEye.ph: A portable chess appliance for capturing chess moves</li>
-        <li>SSLSIRLICS: Smart Street Light System which is under the research "RS-Program on Producing Alternative Clean Energy and Power in Partnership of Caraga LGU's | CSU CRAFT</li>
-        <li>ZLT-S12-PRO: A research project on the ZLT-S12-PRO modem</li>
-        <li>ecoswapX: A cash-free bartering platform for seamless item exchanges.</li>
-    </ul>
-    
-    <h2>Contact Me</h2>
-    <p>Email: cruizallen2@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/cruizallen">https://www.linkedin.com/in/cruizallen</a></p>
+        <section id="skills" class="section">
+            <h2>My Skills</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Hardware Systems</h3>
+                    <p>Hands-on experience with Windows and Linux platforms, system assembly, diagnostics and repair.</p>
+                </div>
+                <div class="card">
+                    <h3>Backend Development</h3>
+                    <p>Server-side development, APIs, databases, and integration of hardware services.</p>
+                </div>
+                <div class="card">
+                    <h3>Networking</h3>
+                    <p>Network design, troubleshooting, and secure configurations for mixed environments.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>UZ801-USB-MODEM</h3>
+                    <p>Research on Qualcomm MSM8916 processor and modem internals.</p>
+                </div>
+                <div class="card">
+                    <h3>RookEye.ph</h3>
+                    <p>A portable chess appliance for capturing chess moves.</p>
+                </div>
+                <div class="card">
+                    <h3>SSLSIRLICS</h3>
+                    <p>Smart Street Light System — research under RS-Program for clean energy partnerships.</p>
+                </div>
+                <div class="card">
+                    <h3>ZLT-S12-PRO</h3>
+                    <p>Project research on the ZLT-S12-PRO modem platform.</p>
+                </div>
+                <div class="card">
+                    <h3>ecoswapX</h3>
+                    <p>A cash-free bartering platform to enable seamless item exchanges.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="card">
+                <p>Email: <a class="link" href="mailto:cruizallen2@gmail.com">cruizallen2@gmail.com</a></p>
+                <p>LinkedIn: <a class="link" href="https://www.linkedin.com/in/cruizallen" target="_blank" rel="noopener">https://www.linkedin.com/in/cruizallen</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container footer" role="contentinfo">
+        <div>&copy; <span id="year"></span> Allen Gabrielle S. Cruiz</div>
+        <div>Built with ✨ • <a class="link" href="https://github.com/AlienWolfX/alienwolfx.github.io" target="_blank" rel="noopener">Source</a></div>
+    </footer>
+
+        <!-- Lightbox for viewing profile photo fullscreen -->
+        <div id="lightbox" class="lightbox" aria-hidden="true">
+            <div class="lightbox-content" role="dialog" aria-modal="true">
+                <button id="lightbox-close" class="lightbox-close" aria-label="Close">×</button>
+                <img id="lightbox-img" src="" alt="" />
+                <div class="lightbox-controls" aria-hidden="false">
+                    <button id="zoom-out" class="lightbox-btn" aria-label="Zoom out">−</button>
+                    <button id="zoom-reset" class="lightbox-btn" aria-label="Reset zoom">⟳</button>
+                    <button id="zoom-in" class="lightbox-btn" aria-label="Zoom in">+</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
 </body>
 </html>
